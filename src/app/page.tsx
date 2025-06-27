@@ -1,11 +1,20 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Logo } from '@/components/logo';
 import { CheckCircle2 } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
+  const [year, setYear] = useState(() => new Date().getFullYear());
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   const features = [
     'Intuitive online booking for gas cylinders.',
     'Separate portals for users and administrators.',
@@ -33,15 +42,15 @@ export default function Home() {
       <main className="flex-1">
         <section className="container py-12 md:py-24 lg:py-32">
           <div className="grid gap-8 lg:grid-cols-2 items-center">
-            <div className="space-y-6 text-center">
+            <div className="space-y-6 text-center lg:text-left">
               <h1 className="text-4xl md:text-5xl font-headline font-bold tracking-tighter">
                 Effortless Gas Cylinder Booking, <br />
                 <span className="text-primary">Right at Your Fingertips.</span>
               </h1>
-              <p className="text-lg text-muted-foreground max-w-lg mx-auto">
+              <p className="text-lg text-muted-foreground max-w-lg mx-auto lg:mx-0">
                 Say goodbye to long waiting times. With GasGo, you can book your gas cylinders online, make payments, and receive instant confirmations.
               </p>
-              <div className="flex justify-center">
+              <div className="flex justify-center lg:justify-start">
                 <Button size="lg" asChild>
                   <Link href="/register">Get Started Today</Link>
                 </Button>
@@ -97,7 +106,7 @@ export default function Home() {
             <div className="mt-12">
               <Card className="p-8">
                 <div className="grid gap-8 md:grid-cols-2 items-center">
-                    <div className="text-center">
+                    <div className="text-center md:text-left">
                         <h3 className="text-2xl font-bold font-headline mb-4">All The Features You Need</h3>
                         <ul className="space-y-4 inline-block text-left">
                         {features.map((feature, index) => (
@@ -128,7 +137,7 @@ export default function Home() {
       <footer className="border-t">
         <div className="container py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
           <Logo />
-          <p className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} GasGo. All rights reserved.</p>
+          <p className="text-sm text-muted-foreground">&copy; {year} GasGo. All rights reserved.</p>
         </div>
       </footer>
     </div>
