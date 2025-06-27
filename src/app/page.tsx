@@ -27,7 +27,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-center">
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-16">
             <Logo />
             <div className="flex items-center gap-4">
               <Button variant="ghost" asChild>
