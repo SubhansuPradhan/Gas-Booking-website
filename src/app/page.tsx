@@ -72,14 +72,14 @@ export default function Home() {
         </section>
 
         <section className="w-full py-12 md:py-24 bg-muted flex justify-center">
-          <div className="container flex flex-col items-center">
+          <div className="container flex flex-col items-center px-4 md:px-6">
             <div className="text-center space-y-4 mb-12">
               <h2 className="text-3xl font-bold font-headline">Why Choose GasGo?</h2>
               <p className="text-muted-foreground md:w-2/3 mx-auto">
                 We are committed to providing a seamless and efficient experience for all your gas booking needs.
               </p>
             </div>
-            <div className="inline-grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               <Card>
                 <CardHeader className="text-center">
                   <CardTitle>Easy Online Booking</CardTitle>
@@ -107,8 +107,8 @@ export default function Home() {
             </div>
             <div className="mt-12 w-full max-w-5xl">
               <Card className="p-8">
-                <div className="flex flex-col items-center gap-8 text-center">
-                    <div className="flex justify-center">
+                <div className="grid md:grid-cols-2 items-center gap-8 text-center md:text-left">
+                    <div className="flex justify-center md:justify-start">
                         <Image
                             src="https://placehold.co/500x300.png"
                             alt="GasGo app screenshot"
@@ -118,7 +118,7 @@ export default function Home() {
                             data-ai-hint="dashboard application"
                         />
                     </div>
-                    <div>
+                    <div className="flex flex-col items-center md:items-start">
                         <h3 className="text-2xl font-bold font-headline mb-4">All The Features You Need</h3>
                         <ul className="space-y-4 inline-block text-left">
                         {features.map((feature, index) => (
