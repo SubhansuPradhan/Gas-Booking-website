@@ -39,7 +39,7 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="flex-1">
+      <main className="flex-1 flex flex-col items-center">
         <section className="container py-12 md:py-24 lg:py-32">
           <div className="flex flex-col items-center gap-12 text-center">
             <div className="space-y-6 max-w-3xl">
