@@ -77,7 +77,7 @@ export default function Home() {
                 We are committed to providing a seamless and efficient experience for all your gas booking needs.
               </p>
             </div>
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="inline-grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               <Card>
                 <CardHeader className="text-center">
                   <CardTitle>Easy Online Booking</CardTitle>
@@ -103,7 +103,7 @@ export default function Home() {
                 </CardContent>
               </Card>
             </div>
-            <div className="mt-12">
+            <div className="mt-12 w-full max-w-5xl">
               <Card className="p-8">
                 <div className="flex flex-col items-center gap-8 text-center">
                     <div className="flex justify-center">
@@ -138,7 +138,7 @@ export default function Home() {
         <div className="container py-6 flex flex-col sm:flex-row justify-center items-center gap-4">
           <Logo />
           <p className="text-sm text-muted-foreground">
-            {year && <>© {year} GasGo. All rights reserved.</>}
+            {year ? <>© {year} GasGo. All rights reserved.</> : <>&nbsp;</>}
           </p>
         </div>
       </footer>
