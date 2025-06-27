@@ -41,7 +41,7 @@ export default function Home() {
 
       <main className="flex-1 flex flex-col items-center">
         <section className="container py-12 md:py-24 lg:py-32">
-          <div className="flex flex-col items-center gap-12 text-center">
+          <div className="flex flex-col items-center justify-center gap-12 text-center">
             <div className="space-y-6 max-w-3xl">
               <h1 className="text-4xl md:text-5xl font-headline font-bold tracking-tighter">
                 Effortless Gas Cylinder Booking, <br />
@@ -70,7 +70,7 @@ export default function Home() {
         </section>
 
         <section className="w-full py-12 md:py-24 bg-muted">
-          <div className="container">
+          <div className="container flex flex-col items-center">
             <div className="text-center space-y-4 mb-12">
               <h2 className="text-3xl font-bold font-headline">Why Choose GasGo?</h2>
               <p className="text-muted-foreground md:w-2/3 mx-auto">
