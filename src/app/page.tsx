@@ -26,21 +26,23 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center">
-          <Logo />
-          <div className="ml-auto flex items-center gap-4">
-            <Button variant="ghost" asChild>
-              <Link href="/login">Login</Link>
-            </Button>
-            <Button asChild>
-              <Link href="/register">Register</Link>
-            </Button>
+        <div className="container flex h-16 items-center justify-center">
+          <div className="flex items-center gap-8">
+            <Logo />
+            <div className="flex items-center gap-4">
+              <Button variant="ghost" asChild>
+                <Link href="/login">Login</Link>
+              </Button>
+              <Button asChild>
+                <Link href="/register">Register</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </header>
 
       <main className="flex-1 flex flex-col items-center">
-        <section className="container py-12 md:py-24 lg:py-32">
+        <section className="container py-12 md:py-24 lg:py-32 flex justify-center">
           <div className="flex flex-col items-center justify-center gap-12 text-center">
             <div className="space-y-6 max-w-3xl">
               <h1 className="text-4xl md:text-5xl font-headline font-bold tracking-tighter">
@@ -69,7 +71,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="w-full py-12 md:py-24 bg-muted">
+        <section className="w-full py-12 md:py-24 bg-muted flex justify-center">
           <div className="container flex flex-col items-center">
             <div className="text-center space-y-4 mb-12">
               <h2 className="text-3xl font-bold font-headline">Why Choose GasGo?</h2>
