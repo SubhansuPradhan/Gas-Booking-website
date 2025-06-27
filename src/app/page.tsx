@@ -33,15 +33,15 @@ export default function Home() {
       <main className="flex-1">
         <section className="container py-12 md:py-24 lg:py-32">
           <div className="grid gap-8 lg:grid-cols-2 items-center">
-            <div className="space-y-6 text-center lg:text-left">
+            <div className="space-y-6 text-center">
               <h1 className="text-4xl md:text-5xl font-headline font-bold tracking-tighter">
                 Effortless Gas Cylinder Booking, <br />
                 <span className="text-primary">Right at Your Fingertips.</span>
               </h1>
-              <p className="text-lg text-muted-foreground max-w-lg mx-auto lg:mx-0">
+              <p className="text-lg text-muted-foreground max-w-lg mx-auto">
                 Say goodbye to long waiting times. With GasGo, you can book your gas cylinders online, make payments, and receive instant confirmations.
               </p>
-              <div className="flex justify-center lg:justify-start">
+              <div className="flex justify-center">
                 <Button size="lg" asChild>
                   <Link href="/register">Get Started Today</Link>
                 </Button>
@@ -97,7 +97,7 @@ export default function Home() {
             <div className="mt-12">
               <Card className="p-8">
                 <div className="grid gap-8 md:grid-cols-2 items-center">
-                    <div className="text-center md:text-left">
+                    <div className="text-center">
                         <h3 className="text-2xl font-bold font-headline mb-4">All The Features You Need</h3>
                         <ul className="space-y-4 inline-block text-left">
                         {features.map((feature, index) => (
