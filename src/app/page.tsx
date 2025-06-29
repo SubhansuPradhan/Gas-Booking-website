@@ -61,8 +61,8 @@ export default function Home() {
               <Image
                 src="https://wpblogassets.paytm.com/paytmblog/uploads/2022/02/row243_How-to-Book-Gas-Cylinder-Step-by-Step-Process.png"
                 alt="Gas cylinder illustration"
-                width={600}
-                height={400}
+                width={800}
+                height={533}
                 className="rounded-xl shadow-2xl"
                 data-ai-hint="gas cylinder kitchen"
               />
