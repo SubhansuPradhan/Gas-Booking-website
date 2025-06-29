@@ -59,7 +59,7 @@ export default function Home() {
             </div>
             <div className="flex justify-center">
               <Image
-                src="https://placehold.co/600x400.png"
+                src="https://wpblogassets.paytm.com/paytmblog/uploads/2022/02/row243_How-to-Book-Gas-Cylinder-Step-by-Step-Process.png"
                 alt="Gas cylinder illustration"
                 width={600}
                 height={400}
