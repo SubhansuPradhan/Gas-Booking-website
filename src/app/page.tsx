@@ -24,6 +24,9 @@ export default function Home() {
     'Instant notifications for important updates.',
   ];
 
+  const line1 = "Effortless Gas Cylinder Booking,";
+  const line2 = "Right at Your Fingertips.";
+
   return (
     <div className="flex flex-col min-h-screen items-center">
        <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -45,8 +48,29 @@ export default function Home() {
           <div className="flex flex-col items-center justify-center gap-12 text-center">
             <div className="space-y-6 max-w-3xl">
               <h1 className="text-4xl md:text-5xl font-headline font-bold tracking-tighter">
-                Effortless Gas Cylinder Booking, <br />
-                <span className="text-primary">Right at Your Fingertips.</span>
+                {line1.split("").map((char, index) => (
+                  <span
+                    key={`line1-${index}`}
+                    className="inline-block animate-wave"
+                    style={{ animationDelay: `${index * 0.07}s` }}
+                  >
+                    {char === " " ? "\u00A0" : char}
+                  </span>
+                ))}
+                <br />
+                <span className="text-primary">
+                  {line2.split("").map((char, index) => (
+                    <span
+                      key={`line2-${index}`}
+                      className="inline-block animate-wave"
+                      style={{
+                        animationDelay: `${(line1.length + index) * 0.07}s`,
+                      }}
+                    >
+                      {char === " " ? "\u00A0" : char}
+                    </span>
+                  ))}
+                </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Say goodbye to long waiting times. With GasGo, you can book your gas cylinders online, make payments, and receive instant confirmations.
