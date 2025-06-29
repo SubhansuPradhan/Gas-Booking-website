@@ -9,11 +9,12 @@ import { CheckCircle2 } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 export default function Home() {
-  const [year, setYear] = useState<number | null>(null);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    setYear(new Date().getFullYear());
+    setIsClient(true);
   }, []);
+
 
   const features = [
     'Intuitive online booking for gas cylinders.',
@@ -25,8 +26,9 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen items-center">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
+          <Logo />
           <div className="flex items-center gap-4">
             <Button variant="ghost" asChild>
               <Link href="/login">Login</Link>
@@ -35,7 +37,6 @@ export default function Home() {
               <Link href="/register">Register</Link>
             </Button>
           </div>
-          <Logo />
         </div>
       </header>
 
@@ -137,9 +138,9 @@ export default function Home() {
       <footer className="border-t w-full">
         <div className="container py-6 flex flex-col sm:flex-row justify-center items-center gap-4">
           <Logo />
-          {year && (
+           {isClient && (
             <p className="text-sm text-muted-foreground">
-              © {year} GasGo. All rights reserved.
+              © {new Date().getFullYear()} GasGo. All rights reserved.
             </p>
           )}
         </div>
