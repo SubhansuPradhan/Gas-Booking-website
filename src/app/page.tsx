@@ -27,7 +27,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen items-center">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-center">
-          <div className="flex items-center gap-16">
+          <div className="flex items-center gap-24">
             <Logo />
             <div className="flex items-center gap-4">
               <Button variant="ghost" asChild>
@@ -139,9 +139,11 @@ export default function Home() {
       <footer className="border-t w-full">
         <div className="container py-6 flex flex-col sm:flex-row justify-center items-center gap-4">
           <Logo />
-          <p className="text-sm text-muted-foreground">
-            {year && <>© {year} GasGo. All rights reserved.</>}
-          </p>
+          {year && (
+            <p className="text-sm text-muted-foreground">
+              © {year} GasGo. All rights reserved.
+            </p>
+          )}
         </div>
       </footer>
     </div>
