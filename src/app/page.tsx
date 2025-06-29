@@ -106,19 +106,9 @@ export default function Home() {
             </div>
             <div className="mt-12 w-full max-w-5xl">
               <Card className="p-8">
-                <div className="grid md:grid-cols-2 items-center gap-8 text-center md:text-left">
-                    <div className="flex justify-center md:justify-start">
-                        <Image
-                            src="https://placehold.co/500x300.png"
-                            alt="GasGo app screenshot"
-                            width={500}
-                            height={300}
-                            className="rounded-lg shadow-lg"
-                            data-ai-hint="dashboard application"
-                        />
-                    </div>
-                    <div className="flex flex-col items-center md:items-start">
-                        <h3 className="text-2xl font-bold font-headline mb-4">All The Features You Need</h3>
+                <div className="flex justify-center">
+                    <div className="flex flex-col items-center">
+                        <h3 className="text-2xl font-bold font-headline mb-4 text-center">All The Features You Need</h3>
                         <ul className="space-y-4 inline-block text-left">
                         {features.map((feature, index) => (
                             <li key={index} className="flex items-start">
