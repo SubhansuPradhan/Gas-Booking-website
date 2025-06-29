@@ -26,18 +26,16 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen items-center">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-center">
-          <div className="flex items-center gap-24">
-            <Logo />
-            <div className="flex items-center gap-4">
-              <Button variant="ghost" asChild>
-                <Link href="/login">Login</Link>
-              </Button>
-              <Button asChild>
-                <Link href="/register">Register</Link>
-              </Button>
-            </div>
+        <div className="container flex h-16 items-center justify-between">
+          <div className="flex items-center gap-4">
+            <Button variant="ghost" asChild>
+              <Link href="/login">Login</Link>
+            </Button>
+            <Button asChild>
+              <Link href="/register">Register</Link>
+            </Button>
           </div>
+          <Logo />
         </div>
       </header>
 
